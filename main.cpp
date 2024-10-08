@@ -4,7 +4,6 @@
 #include "serialmanager.h"
 #include "pythonrunner.h"
 #include "cardatareceiver.h"
-#include "SpotifyReceiver.h"
 #include <QThread>
 #include <QCoreApplication>
 #include "spotifyclient.h"
@@ -21,7 +20,6 @@ int main(int argc, char *argv[])
     qmlRegisterType<PythonRunner>("MyPythonScript", 1, 0, "PythonRunner");
     qmlRegisterType<CarDataReceiver>("com.company.cardatareceiver", 1, 0, "CarDataReceiver" );
     qmlRegisterType<SpotifyClient>("spotifyclient", 1, 0, "SpotifyClient");
-    qmlRegisterType<SpotifyReceiver>("spotifyreceiver", 1, 0, "Spotifyreceiver" );
     qmlRegisterType<Fota>("fota.backend", 1, 0, "FotaBackend" );
 
 
@@ -42,8 +40,6 @@ int main(int argc, char *argv[])
     CarDataReceiver carDataReceiver;
     engine.rootContext()->setContextProperty("carDataReceiver", &carDataReceiver);
 
-    SpotifyReceiver spotifyReceiver;
-    engine.rootContext()->setContextProperty("SpotifyReceiver", &spotifyReceiver);
 
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,

@@ -7,7 +7,6 @@ import QtQuick.Controls.Styles 1.4
 import com.company.serialmanager 1.0
 import MyPythonScript 1.0
 import com.company.cardatareceiver 1.0
-import spotifyreceiver 1.0
 import spotifyclient 1.0
 Item {
     id: item1

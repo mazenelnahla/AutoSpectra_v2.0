@@ -41,7 +41,7 @@ else()
           cardatareceiver.h cardatareceiver.cpp
           serialmanager.h serialmanager.cpp
           pythonrunner.h pythonrunner.cpp
-          SpotifyReceiver.h SpotifyReceiver.cpp
+
           spotifyclient.h spotifyclient.cpp
           fota.h fota.cpp
         )

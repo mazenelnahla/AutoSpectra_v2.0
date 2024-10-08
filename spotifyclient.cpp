@@ -146,16 +146,6 @@ QString SpotifyClient::getAuthorizationCode() {
     QString authUrl = QString("https://accounts.spotify.com/authorize?response_type=code&client_id=%1&scope=%2&redirect_uri=%3")
                           .arg(clientId, scope, redirectUri);
 
-    // Display the URL to the user
-    qDebug() << "============================================";
-    qDebug() << "Spotify Authorization Required";
-    qDebug() << "============================================";
-    qDebug() << "Please open the following URL in your browser to authorize the application:";
-    qDebug() << "\"" << authUrl << "\"";
-    qDebug() << "After authorization, you will be redirected to a URL like:";
-    qDebug() << "http://<Pi_IP_Address>:8888/callback?code=YOUR_AUTHORIZATION_CODE";
-    qDebug() << "============================================";
-
     // Start the OAuth server to listen for the redirect
     oauthServer = new OAuthServer(this);
     connect(oauthServer, &OAuthServer::authorizationReceived, this, &SpotifyClient::handleAuthorizationReceived);
