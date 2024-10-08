@@ -53,7 +53,7 @@ Ensure you have the following installed:
     cd autospectra-instrument-cluster
 
 uncomment dist in source
-    ```bash
+   ```bash
     sudo nano /etc/apt/sources.list
 
 3. Install dependencies:
