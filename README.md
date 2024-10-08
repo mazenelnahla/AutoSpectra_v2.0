@@ -55,7 +55,7 @@ Ensure you have the following installed:
 uncomment dist in source
    ```bash
     sudo nano /etc/apt/sources.list
-
+```
 3. Install dependencies:
     ```bash
     sudo apt-get update
